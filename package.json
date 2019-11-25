@@ -23,7 +23,7 @@
     "README.md",
     "crel.js",
     "crel.min.js",
-    "crel.mjs",
+    "crel.es.js",
     "package.json"
   ],
   "scripts": {
