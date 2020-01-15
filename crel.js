@@ -51,7 +51,6 @@
         attrMapString = 'attrMap',
         isNodeString = 'isNode',
         isElementString = 'isElement',
-        d = typeof document === obj ? document : {},
         isType = function(a, type){
             return typeof a === type;
         },
@@ -79,7 +78,7 @@
                 return;
             }
             if(!crel[isNodeString](child)){
-                child = d.createTextNode(child);
+                child = document.createTextNode(child);
             }
             element.appendChild(child);
         };
@@ -94,7 +93,7 @@
             argumentsLength = args.length,
             attributeMap = crel[attrMapString];
 
-        element = crel[isElementString](element) ? element : d.createElement(element);
+        element = crel[isElementString](element) ? element : document.createElement(element);
         // shortcut
         if(argumentsLength === 1){
             return element;
